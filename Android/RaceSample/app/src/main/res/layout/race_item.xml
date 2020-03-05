@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/race_content"
+    android:visibility="visible"
+    android:layout_width="200dp"
+    android:layout_height="340dp"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="right|bottom"
+    android:layout_marginBottom="40dp"
+    android:background="@color/translucent_ban">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_above="@+id/tv_sure"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="美颜设置"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/btn_switch_beauty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="美颜开关"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_whitening"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_whitening"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_buffing"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_buffing"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_sharp"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_sharp"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_cut_cheek"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_cut_cheek"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_cut_face"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_cut_face"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_thin_face"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_thin_face"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_long_face"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_long_face"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_lower_jaw"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_lower_jaw"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_higher_jaw"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_higher_jaw"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_thin_jaw"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_thin_jaw"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_thin_mandible"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_thin_mandible"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_big_eye"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_big_eye"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_eye_angle1"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_eye_angle1"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_canthus"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_canthus"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_canthus1"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_canthus1"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_eye_angle2"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_eye_angle2"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_eye_tdangle"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_eye_tdangle"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_thin_nose"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_thin_nose"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_nose_wing"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_nose_wing"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_nasal_height"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_nasal_height"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_nose_tip_height"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_nose_tip_height"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_mouth_width"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_mouth_width"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_mouth_size"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_mouth_size"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_mouth_high"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_mouth_high"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beauty_philtrum"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <com.aliyun.rtcdemo.widget.seekbar.DiscreteSeekBar
+                    android:id="@+id/beauty_philtrum"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:dsb_indicatorColor="@drawable/seek_bar_color"
+                    app:dsb_indicatorElevation="0dp"
+                    app:dsb_indicatorPopupEnabled="false"
+                    app:dsb_max="100"
+                    app:dsb_min="0"
+                    app:dsb_progressColor="@drawable/seek_bar_color"
+                    app:dsb_scrubberHeight="@dimen/seek_bar_scrubber_height"
+                    app:dsb_thumbSize="@dimen/seek_bar_thumb_size"
+                    app:dsb_value="0" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/tv_sure"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="确定"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:textSize="14sp" />
+</RelativeLayout>
